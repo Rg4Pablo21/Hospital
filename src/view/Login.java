@@ -19,7 +19,7 @@ class Login extends JFrame {
         panel.setBackground(Color.WHITE);
 
         // Crear y configurar el label de Correo
-        JLabel emailLabel = new JLabel("Correo:");
+        JLabel emailLabel = new JLabel("Correo;");
         emailLabel.setBounds(50, 100, 100, 30);
         emailLabel.setFont(new Font("Arial", Font.PLAIN, 14));
         emailLabel.setForeground(Color.DARK_GRAY);
@@ -31,7 +31,7 @@ class Login extends JFrame {
         panel.add(emailField);
 
         // Crear y configurar el label de Contraseña
-        JLabel passwordLabel = new JLabel("Contraseña:");
+        JLabel passwordLabel = new JLabel("Contraseña;");
         passwordLabel.setBounds(50, 160, 100, 30);
         passwordLabel.setFont(new Font("Arial", Font.PLAIN, 14));
         passwordLabel.setForeground(Color.DARK_GRAY);
