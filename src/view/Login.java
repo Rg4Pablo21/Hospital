@@ -1,63 +1,100 @@
 package view;
 
+import model.DoctorGeneral;
+import servicios.bdDoctores;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.EventListener;
 
-class Login extends JFrame {
+public class Login extends JFrame {
+
+    //Objetos Globales
+    private JLabel user;
+    private JTextField usuario;
+    private JPasswordField password;
+    private JButton boton;
 
     public Login() {
-        // Configurar el JFrame
-        this.setTitle("Login");
-        this.setLayout(null);
-        this.setBounds(100, 100, 400, 500);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Crear el panel principal (único)
-        JPanel panel = new JPanel();
-        panel.setLayout(null);
-        panel.setBounds(0, 0, 400, 500);
-        panel.setBackground(Color.WHITE);
+        //CONFIGURACIÓN DE MI VENTANA
+        this.setBounds(0, 0, 1600, 1000);
 
-        // Crear y configurar el label de Correo
-        JLabel emailLabel = new JLabel("Correo:");
-        emailLabel.setBounds(50, 100, 100, 30);
-        emailLabel.setFont(new Font("Arial", Font.PLAIN, 14));
-        emailLabel.setForeground(Color.DARK_GRAY);
-        panel.add(emailLabel);
+        //PANEL PRINCIPAL
+        JPanel mainPanel = new JPanel(new GridLayout(1, 2));
 
-        // Crear el campo de texto para el correo
-        JTextField emailField = new JTextField();
-        emailField.setBounds(150, 100, 200, 30);
-        panel.add(emailField);
+        //PANEL DEL BANNER
+        JPanel panel1 = new JPanel(new GridBagLayout());
+        panel1.setBackground(Color.black);
 
-        // Crear y configurar el label de Contraseña
-        JLabel passwordLabel = new JLabel("Contraseña;");
-        passwordLabel.setBounds(50, 160, 100, 30);
-        passwordLabel.setFont(new Font("Arial", Font.PLAIN, 14));
-        passwordLabel.setForeground(Color.DARK_GRAY);
-        panel.add(passwordLabel);
+        //SEGUNDO PANEL
+        JPanel panel2 = new JPanel(new GridBagLayout());
+        panel2.setBackground(Color.white);
 
-        // Crear el campo de contraseña
-        JPasswordField passwordField = new JPasswordField();
-        passwordField.setBounds(150, 160, 200, 30);
-        panel.add(passwordField);
+        //RESTRICCIONES
+        GridBagConstraints restricciones = new GridBagConstraints();
+        restricciones.gridx = 0;
+        restricciones.gridy = 0;
 
-        // Crear el botón de inicio de sesión
-        JButton loginButton = new JButton("Iniciar sesión");
-        loginButton.setBounds(150, 220, 200, 30);
-        loginButton.setFont(new Font("Arial", Font.PLAIN, 14));
-        loginButton.setBackground(Color.LIGHT_GRAY);
-        loginButton.setFocusPainted(false);
-        panel.add(loginButton);
+        user = new JLabel("Email");
+        panel2.add(user, restricciones);
 
+        usuario = new JTextField();
+        usuario.setPreferredSize(new Dimension(350, 40));
+        restricciones.gridy = 1;
+        panel2.add(usuario, restricciones);
 
-        this.add(panel);
+        JLabel contra = new JLabel("Password");
+        restricciones.gridy = 2;
+        panel2.add(contra, restricciones);
 
+        password = new JPasswordField();
+        password.setPreferredSize(new Dimension(350, 40));
+        restricciones.gridy = 3;
+        panel2.add(password, restricciones);
 
+        //BOTÓN
+        boton = new JButton("Login");
+        boton.setPreferredSize(new Dimension(100, 25));
+        restricciones.gridy = 4;
+        panel2.add(boton, restricciones);
+
+        //ACCIÓN DEL BOTÓN
+        boton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Aquí puedes implementar la lógica cuando se presione el botón
+
+            }
+        });
+
+        mainPanel.add(panel1);
+        mainPanel.add(panel2);
+
+        this.add(mainPanel);
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        new Login();
+    public class LoginView {
+        // Simulación de los campos de formulario
+        private String usuario;
+        private String contraseña;
+
+        public LoginView(String usuario, String Contraseña) {
+            this.usuario = usuario;
+            this.contraseña = Contraseña;
+        }
+
+        // Métodos get para recuperar los datos
+        public String getUsuario() {
+            return usuario;
+        }
+
+        public String getContraseña() {
+            return contraseña;
+        }
     }
 }
