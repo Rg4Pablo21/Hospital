@@ -39,7 +39,7 @@ public class DoctorView extends JFrame {
 
         gbc.gridx = 1;
         gbc.gridy = 0;
-        JLabel doctorNameLabel = new JLabel("Diego Villatoro");
+        JLabel doctorNameLabel = new JLabel("Pablo Giron");
         doctorNameLabel.setForeground(Color.WHITE);
         userPanel.add(doctorNameLabel, gbc);
 
@@ -88,4 +88,9 @@ public class DoctorView extends JFrame {
         return op;
  }
 
+ public static void main (String[] args){
+        new DoctorView();
+ }
+
 }
+
