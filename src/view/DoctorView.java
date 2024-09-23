@@ -70,11 +70,11 @@ public class DoctorView extends JFrame {
 
         JPanel menu = new JPanel();
 
-        menu.add(op("Opcion 1"),gbc);
-        menu.add(op("Opcion 2"),gbc);
-        menu.add(op("Opcion 3"),gbc);
-        menu.add(op("Opcion 4"),gbc);
-        menu.add(op("Opcion 5"),gbc);
+        menu.add(op("Opción 1"),gbc);
+        menu.add(op("Opción 2"),gbc);
+        menu.add(op("Opción 3"),gbc);
+        menu.add(op("Opción 4"),gbc);
+        menu.add(op("Opción 5"),gbc);
         menuPanel.add(menu);
         return menuPanel;
     }
@@ -83,7 +83,7 @@ public class DoctorView extends JFrame {
 
         op.addActionListener(e -> {
             System.out.println(texto);
-            
+
         });
         return op;
  }
