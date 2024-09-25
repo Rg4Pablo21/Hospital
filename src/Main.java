@@ -3,7 +3,7 @@ import model.Salas;
 import model.Secretarias;
 import servicios.bdDoctores;
 import view.DoctorView;
-import model.paciente;
+
 
 
 import javax.swing.*;

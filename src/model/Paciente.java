@@ -1,6 +1,6 @@
 package model;
 
-public class paciente {
+public class Paciente {
     // Atributos
     private String nombre;
     private String correo;
@@ -13,7 +13,7 @@ public class paciente {
     private String doctor;
 
     // Constructor
-    public paciente(String nombre, String correo, String telefono, String direccion, String fechaNacimiento,
+    public Paciente(String nombre, String correo, String telefono, String direccion, String fechaNacimiento,
                     String horarioCita, String motivoVisita, int numeroConsultas, String doctor) {
         this.nombre = nombre;
         this.correo = correo;
