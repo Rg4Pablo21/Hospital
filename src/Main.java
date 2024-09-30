@@ -1,31 +1,35 @@
+import model.Enfermeras;
+import model.Salas;
+import model.Secretarias;
+import servicios.bdDoctores;
+import view.DoctorView;
+
+
+
 import javax.swing.*;
-import java.awt.*;
-public class Main {
+
+public class Main extends JFrame {
     public static void main(String[] args) {
-        JFrame ventana = new JFrame("Naturás");
-        Dimension width;
-        ventana.setSize(1800,1000);
-
-        JPanel mainPanel = new JPanel();
-        mainPanel.setBackground(Color.BLUE);
-        mainPanel.setLayout(new GridLayout(1,2));
-
-        JPanel panel1= new JPanel();
-        panel1.setBackground(Color.BLACK);
-
-        JPanel panel2=new JPanel();
-        panel2.setBackground(Color.pink);
-        panel2.setLayout(new GridLayout(1,2));
 
 
-        mainPanel.add(panel1);
-        mainPanel.add(panel2);
+        Enfermeras enfermeras = new Enfermeras();
+        Salas salas = new Salas();
+        Secretarias secretarias = new Secretarias();
 
-        ventana.add(mainPanel);
-        ventana.setVisible(true);
-
-        ventana.setVisible(true);
+        bdDoctores bdDoctoresService = new bdDoctores();
 
 
+
+
+        DoctorView doctorView = new DoctorView();
+
+
+        System.out.println("Enfermeras: " + enfermeras);
+        System.out.println("Salas: " + salas);
+        System.out.println("Secretarias: " + secretarias);
+        System.out.println("Paciente;");
+
+
+        doctorView.show();
     }
 }

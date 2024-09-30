@@ -1,4 +1,4 @@
-package view;
+package servicios;
 import model.DoctorGeneral;
 import java.util.ArrayList;
 

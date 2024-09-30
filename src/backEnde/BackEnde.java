@@ -1,9 +1,9 @@
-package backEnd;
+package backEnde;
 import java.util.HashMap;
 import model.DoctorGeneral;
 import view.bdDoctores;
 
-public class BackEnd {
+public class BackEnde {
     public HashMap<String, String> validarDatos(String usuario, String contraseña) {
         bdDoctores dataDoctor = new bdDoctores();
         HashMap<String, String> response = new HashMap<>();
