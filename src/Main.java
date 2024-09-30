@@ -27,7 +27,7 @@ public class Main extends JFrame {
         System.out.println("Enfermeras: " + enfermeras);
         System.out.println("Salas: " + salas);
         System.out.println("Secretarias: " + secretarias);
-        System.out.println("paciente");
+        System.out.println("Paciente;");
 
 
         doctorView.show();

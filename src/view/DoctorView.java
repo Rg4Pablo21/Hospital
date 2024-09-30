@@ -101,7 +101,7 @@ public class DoctorView extends JFrame {
         headerPanel.add(userPanel, BorderLayout.EAST);
         add(headerPanel, BorderLayout.NORTH);
         add(componentesLateral(), BorderLayout.WEST);
-        add(panelPacientes(), BorderLayout.CENTER); // Añadir el panel de pacientes
+        add(panelPacientes(), BorderLayout.CENTER);
 
         setVisible(true);
     }
@@ -118,11 +118,11 @@ public class DoctorView extends JFrame {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
 
-        menu.add(op("Opcion 1"), gbc);
-        menu.add(op("Opcion 2"), gbc);
-        menu.add(op("Opcion 3"), gbc);
-        menu.add(op("Opcion 4"), gbc);
-        menu.add(op("Opcion 5"), gbc);
+        menu.add(op("Consultas"), gbc);
+        menu.add(op("Salas"), gbc);
+        menu.add(op("Farmacia"), gbc);
+        menu.add(op("Pacientes Registrados"), gbc);
+        menu.add(op("Citar en otra area"), gbc);
 
         menuPanel.add(menu);
         return menuPanel;
@@ -136,8 +136,8 @@ public class DoctorView extends JFrame {
         return op;
     }
     private JPanel panelPacientes() {
-        PacienteView pacienteView = new PacienteView(); // Crear instancia de PacienteView
-        return pacienteView.panelPaciente(listaPacientes); // Llamar al método para obtener el panel
+        PacienteView pacienteView = new PacienteView();
+        return pacienteView.panelPaciente(listaPacientes);
     }
 
     public static void main(String[] args) {
