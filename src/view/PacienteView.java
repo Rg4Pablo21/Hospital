@@ -37,8 +37,7 @@ public class PacienteView {
         for (Paciente paciente : listaPacientes) {
             panelDatos.add(new JLabel(paciente.getNombre()));
             panelDatos.add(new JLabel(paciente.getFechaNacimiento()));
-            panelDatos.add(new JLabel(paciente.getHorarioCita()));
-            panelDatos.add(new JLabel(paciente.getMotivoVisita()));
+
         }
 
         panel.add(new JScrollPane(panelDatos), BorderLayout.CENTER);
