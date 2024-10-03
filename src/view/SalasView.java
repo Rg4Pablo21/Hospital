@@ -1,7 +1,5 @@
 package view;
 
-import model.DataSalas;
-import model.Salas;
 import model.Salas;
 
 import javax.swing.*;

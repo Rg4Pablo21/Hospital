@@ -1,18 +1,18 @@
 package view;
-import model.Paciente;
+import model.Pacientes;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
 public class PacienteView {
-    private ArrayList<Paciente> listaPacientes;
+    private ArrayList<Pacientes> listaPacientes;
 
     public PacienteView() {
         listaPacientes = new ArrayList<>();
     }
 
-    public JPanel panelPaciente(ArrayList<Paciente> listaPacientes) {
+    public JPanel panelPaciente(ArrayList<Pacientes> listaPacientes) {
         this.listaPacientes = listaPacientes;
 
         JPanel panel = new JPanel();
@@ -34,10 +34,11 @@ public class PacienteView {
             panelDatos.add(etiqueta);
         }
 
-        for (Paciente paciente : listaPacientes) {
+        for (Pacientes paciente : listaPacientes) {
             panelDatos.add(new JLabel(paciente.getNombre()));
             panelDatos.add(new JLabel(paciente.getFechaNacimiento()));
-
+            panelDatos.add(new JLabel(paciente.getHorarioCita()));
+            panelDatos.add(new JLabel(paciente.getMotivoVisita()));
         }
 
         panel.add(new JScrollPane(panelDatos), BorderLayout.CENTER);

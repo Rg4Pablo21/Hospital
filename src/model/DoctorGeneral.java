@@ -1,5 +1,4 @@
 package model;
-import model.DoctorGeneral;
 
 public class DoctorGeneral {
 

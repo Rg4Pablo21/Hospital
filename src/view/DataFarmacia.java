@@ -1,5 +1,6 @@
-package model;
+package view;
 import model.Medicamento;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -7,13 +8,11 @@ import java.util.List;
 public class DataFarmacia {
     private List<Medicamento> medicamentos;
 
-    // Constructor para inicializar la lista de medicamentos
     public DataFarmacia() {
         medicamentos = new ArrayList<>();
         agregarMedicamentos();
     }
 
-    // Método para agregar 40 medicamentos a la lista
     private void agregarMedicamentos() {
         medicamentos.add(new Medicamento("Paracetamol", "Tableta", "500mg", "Paracetamol", LocalDate.of(2025, 6, 15), "L001", 15.50, "Dolor y fiebre", "Insuficiencia hepática"));
         medicamentos.add(new Medicamento("Ibuprofeno", "Cápsula", "400mg", "Ibuprofeno", LocalDate.of(2026, 2, 10), "L002", 25.00, "Inflamación y dolor", "Úlceras gástricas"));
@@ -26,7 +25,6 @@ public class DataFarmacia {
         medicamentos.add(new Medicamento("Simvastatina", "Tableta", "20mg", "Simvastatina", LocalDate.of(2026, 3, 5), "L009", 45.00, "Colesterol alto", "Enfermedad hepática"));
         medicamentos.add(new Medicamento("Diclofenaco", "Tableta", "50mg", "Diclofenaco", LocalDate.of(2025, 10, 12), "L010", 22.50, "Inflamación y dolor", "Úlceras gástricas"));
 
-        // Agrega 30 medicamentos más
         medicamentos.add(new Medicamento("Clonazepam", "Tableta", "2mg", "Clonazepam", LocalDate.of(2026, 4, 15), "L011", 60.50, "Trastornos de ansiedad", "Glaucoma"));
         medicamentos.add(new Medicamento("Salbutamol", "Inhalador", "100mcg", "Salbutamol", LocalDate.of(2025, 11, 25), "L012", 35.00, "Asma", "Hipertiroidismo"));
         medicamentos.add(new Medicamento("Azitromicina", "Tableta", "500mg", "Azitromicina", LocalDate.of(2024, 10, 12), "L013", 50.00, "Infecciones bacterianas", "Insuficiencia hepática"));
@@ -60,10 +58,8 @@ public class DataFarmacia {
         medicamentos.add(new Medicamento("Metamizol", "Tableta", "500mg", "Metamizol", LocalDate.of(2026, 6, 7), "L039", 15.00, "Dolor e inflamación", "Hipersensibilidad"));
         medicamentos.add(new Medicamento("Topiramato", "Tableta", "100mg", "Topiramato", LocalDate.of(2024, 10, 20), "L040", 70.00, "Epilepsia", "Insuficiencia renal"));
 
-
     }
 
-    // Método para obtener la lista de medicamentos
     public List<Medicamento> getMedicamentos() {
         return medicamentos;
     }
